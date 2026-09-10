@@ -1,11 +1,12 @@
+from datetime import datetime
 from django.db.models import QuerySet
-from django.templatetags.tz import datetimeobject
+
 
 from db.models import MovieSession
 
 
 def create_movie_session(
-        movie_show_time: datetimeobject,
+        movie_show_time: datetime,
         movie_id: int,
         cinema_hall_id: int
 ) -> None:
@@ -28,7 +29,7 @@ def get_movie_session_by_id(movie_session_id: int) -> MovieSession:
 
 def update_movie_session(
         session_id: int,
-        show_time: datetimeobject | None = None,
+        show_time: datetime | None = None,
         movie_id: int | None = None,
         cinema_hall_id: int | None = None
 ) -> None:
