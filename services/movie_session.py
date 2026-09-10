@@ -1,7 +1,7 @@
 from django.db.models import QuerySet
 from django.templatetags.tz import datetimeobject
 
-from db.models import MovieSession, CinemaHall, Movie
+from db.models import MovieSession
 
 
 def create_movie_session(
